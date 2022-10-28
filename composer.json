@@ -1,0 +1,17 @@
+{
+    "name": "daw-dwes/mvc-doctrine",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/",
+            "Config\\": "config/"
+        }
+    },
+    "require": {
+        "twig/twig": "^3.4",
+        "doctrine/orm": "^2.11.0",
+        "soctrine/dbal": "^3.2",
+        "doctrine/annotations": "1.13.2",
+        "symfony/cache": "^5.4",
+        "vlucas/phpdotenv": "^5.5"
+    }
+}
