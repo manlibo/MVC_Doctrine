@@ -6,7 +6,7 @@ use Doctrine\ORM\Mapping as ORM;
 use App\Repository\TareasRepository;
 
 /**
- * @ORM\Entity(repositoryClass=UserRepository::class)
+ * @ORM\Entity(repositoryClass=TareasRepository::class)
  * @ORM\Table(name="tareas")
  */
 
@@ -20,22 +20,22 @@ use App\Repository\TareasRepository;
     private $id;
 
     /**
-    * @ORM\Column(name="titulo", type="string", lenght="255")
+    * @ORM\Column(name="titulo", type="string", length="255")
     */
     private $titulo;
 
     /**
-    * @ORM\Column(type="string", lenght="65535", name="descripcion")
+    * @ORM\Column(name="descripcion", type="string", length="65535")
     */
     private $descripcion;
 
     /**
-    * @ORM\Column(type="date", name="fecha_creacion")
+    * @ORM\Column(name="fecha_creacion", type="date")
     */
     private $fecha_creacion;
 
     /** 
-    * @ORM\Column(type="date", name="fecha_vencimiento")
+    * @ORM\Column(name="fecha_vencimiento", type="date")
     */
     private $fecha_vencimiento;
 
