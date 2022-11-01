@@ -17,8 +17,8 @@ class MainController extends AbstractController{
         //Obtenemos el objeto EntityManager para realizar la busqueda de datos.
         $entityManager = (new EntityManager())->getEntityManager();
         //Obtenemos el repositorio desde la entidad y llamamos en este caso a un método predefinido de doctrine
-        $tareas = $entityManager->getRepository(Tareas::class);
-        $data = $tareas->findAll();
+        $tareasRepository = $entityManager->getRepository(Tareas::class);
+        $data = $tareasRepository->findAll();
         $this->render("list.html.twig",
         ['resultados'=>$data,
         'titulo'=>$data[0]->getTitulo()

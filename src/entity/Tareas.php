@@ -1,6 +1,7 @@
 <?php
 
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\TareasRepository;
 
 /**
  * @ORM\Entity(repositoryClass=UserRepository::class)
@@ -10,19 +11,19 @@ use Doctrine\ORM\Mapping as ORM;
  class Tareas
  {
     /**
-    * @ORM\id
+    * @ORM\Id
     * @ORM\GeneratedValue
-    * @ORM\Column(type="integer",name="id")
+    * @ORM\Column(type="integer", name="id")
     */
     private $id;
 
     /**
-    * @ORM\Column(type="string",lenght="255", name="id")
+    * @ORM\Column(name="titulo", type="string", lenght="255")
     */
     private $titulo;
 
     /**
-    * @ORM\Column(type="string",lenght="65535", name="descripcion")
+    * @ORM\Column(type="string", lenght="65535", name="descripcion")
     */
     private $descripcion;
 
